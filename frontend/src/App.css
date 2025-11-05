@@ -1,0 +1,526 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.api-box {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+.api-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.api-header-left {
+  flex: 1;
+}
+
+.api-box h2 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  cursor: default;
+}
+
+.show-hide-button {
+  padding: 8px 16px;
+  background-color: #646cff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+  margin-left: 16px;
+  align-self: flex-start;
+}
+
+.show-hide-button:hover {
+  background-color: #535bf2;
+}
+
+.show-hide-button:active {
+  background-color: #4a52e0;
+}
+
+.collapsible-header {
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  margin: -8px -8px 12px -8px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.collapsible-header:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.chevron {
+  display: inline-block;
+  font-size: 12px;
+  color: #666;
+  transition: transform 0.2s;
+}
+
+.scrollable-content {
+  background-color: #ffffff;
+  border-radius: 4px;
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 400px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  margin-top: 8px;
+}
+
+.scrollable-content pre {
+  padding: 8px;
+  margin: 0;
+  white-space: pre;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  min-width: 100%;
+  display: block;
+}
+
+/* Welcome Page Styles */
+.welcome-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 32px 16px;
+  box-sizing: border-box;
+}
+
+.welcome-content {
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+}
+
+.welcome-title {
+  font-size: 3.5em;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #646cff 0%, #535bf2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.welcome-subtitle {
+  font-size: 1.25em;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 48px;
+  line-height: 1.6;
+}
+
+.welcome-actions {
+  margin-bottom: 64px;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.welcome-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 32px;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #646cff 0%, #535bf2 100%);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(100, 108, 255, 0.3);
+}
+
+.welcome-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(100, 108, 255, 0.4);
+  background: linear-gradient(135deg, #535bf2 0%, #646cff 100%);
+}
+
+.welcome-button-secondary {
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+}
+
+.welcome-button-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
+  background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
+}
+
+.button-arrow {
+  font-size: 1.2em;
+  transition: transform 0.3s ease;
+}
+
+.welcome-button:hover .button-arrow {
+  transform: translateX(4px);
+}
+
+.welcome-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.feature-card {
+  padding: 32px 24px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(100, 108, 255, 0.5);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.feature-icon {
+  font-size: 3em;
+  margin-bottom: 16px;
+}
+
+.feature-card h3 {
+  font-size: 1.5em;
+  margin: 0 0 12px 0;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.feature-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+
+@media (prefers-color-scheme: light) {
+  .welcome-title {
+    background: linear-gradient(135deg, #646cff 0%, #535bf2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .welcome-subtitle {
+    color: rgba(33, 53, 71, 0.7);
+  }
+
+  .welcome-button {
+    color: #ffffff;
+  }
+
+  .welcome-button-secondary {
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+  }
+
+  .welcome-button-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
+    background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
+  }
+
+  .feature-card {
+    background: rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .feature-card:hover {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: rgba(100, 108, 255, 0.3);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  .feature-card h3 {
+    color: rgba(33, 53, 71, 0.95);
+  }
+
+  .feature-card p {
+    color: rgba(33, 53, 71, 0.7);
+  }
+}
+
+@media (max-width: 768px) {
+  .welcome-title {
+    font-size: 2.5em;
+  }
+
+  .welcome-subtitle {
+    font-size: 1.1em;
+  }
+
+  .welcome-features {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .feature-card {
+    padding: 24px 20px;
+  }
+}
+
+/* README Viewer Styles */
+.readme-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.readme-header {
+  margin-bottom: 32px;
+  border-bottom: 2px solid rgba(100, 108, 255, 0.3);
+  padding-bottom: 16px;
+}
+
+.readme-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #646cff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-bottom: 16px;
+  transition: color 0.2s;
+}
+
+.readme-back-link:hover {
+  color: #535bf2;
+}
+
+.readme-header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  background: linear-gradient(135deg, #646cff 0%, #535bf2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.readme-content {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 32px;
+  backdrop-filter: blur(10px);
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.readme-content h1,
+.readme-content h2,
+.readme-content h3,
+.readme-content h4,
+.readme-content h5,
+.readme-content h6 {
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 600;
+}
+
+.readme-content h1 {
+  margin-top: 0;
+}
+
+.readme-content h2 {
+  font-size: 1.75em;
+}
+
+.readme-content h3 {
+  font-size: 1.5em;
+}
+
+.readme-content p {
+  margin-bottom: 16px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.readme-content ul,
+.readme-content ol {
+  margin-bottom: 16px;
+  padding-left: 24px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.readme-content li {
+  margin-bottom: 8px;
+}
+
+.readme-content code {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9em;
+  color: #ff6b9d;
+}
+
+.readme-content pre {
+  padding: 16px;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-bottom: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.readme-content pre code {
+  background: none;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9em;
+}
+
+.readme-content a {
+  color: #646cff;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.readme-content a:hover {
+  color: #535bf2;
+}
+
+.readme-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 16px;
+}
+
+.readme-content table th,
+.readme-content table td {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 12px;
+  text-align: left;
+}
+
+.readme-content table th {
+  background: rgba(100, 108, 255, 0.2);
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.readme-content table td {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.readme-content blockquote {
+  border-left: 4px solid #646cff;
+  padding-left: 16px;
+  margin: 16px 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-style: italic;
+}
+
+@media (prefers-color-scheme: light) {
+  .readme-content {
+    background: rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(33, 53, 71, 0.9);
+  }
+
+  .readme-content h1,
+  .readme-content h2,
+  .readme-content h3,
+  .readme-content h4,
+  .readme-content h5,
+  .readme-content h6 {
+    color: rgba(33, 53, 71, 0.95);
+  }
+
+  .readme-content h1 {
+    border-bottom-color: rgba(100, 108, 255, 0.3);
+  }
+
+  .readme-content h2 {
+    border-bottom-color: rgba(100, 108, 255, 0.2);
+  }
+
+  .readme-content p,
+  .readme-content ul,
+  .readme-content ol,
+  .readme-content li {
+    color: rgba(33, 53, 71, 0.85);
+  }
+
+  .readme-content code {
+    background: rgba(0, 0, 0, 0.1);
+    color: #c7254e;
+  }
+
+  .readme-content pre {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .readme-content pre code {
+    color: rgba(33, 53, 71, 0.9);
+  }
+
+  .readme-content table th,
+  .readme-content table td {
+    border-color: rgba(0, 0, 0, 0.15);
+  }
+
+  .readme-content table th {
+    background: rgba(100, 108, 255, 0.1);
+    color: rgba(33, 53, 71, 0.95);
+  }
+
+  .readme-content table td {
+    color: rgba(33, 53, 71, 0.85);
+  }
+
+  .readme-content blockquote {
+    border-left-color: #646cff;
+    color: rgba(33, 53, 71, 0.7);
+  }
+}
+
+@media (max-width: 768px) {
+  .readme-container {
+    padding: 24px 16px;
+  }
+
+  .readme-content {
+    padding: 24px 16px;
+  }
+
+  .readme-header h1 {
+    font-size: 2em;
+  }
+}
