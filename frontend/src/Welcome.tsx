@@ -19,6 +19,10 @@ function Welcome() {
             View API Data
             <span className="button-arrow">→</span>
           </Link>
+          <Link to="/" className="welcome-button welcome-button-warning">
+            View Portfolio
+            <span className="button-arrow">→</span>
+          </Link>
         </div>
         <div className="welcome-features">
           <div className="feature-card">
